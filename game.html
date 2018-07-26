@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
+  <style>
+  div.topnav {
+    box-shadow: 0px 6px 6px grey;
+    height: 48px;
+  }
+  </style>
+  <link rel="stylesheet" href="index.css">
+
+  <div class="topnav">
+    <a title="Home page"class="active" href="indexpatient.html"><img src="home.png" width="20" height="20" alt="Planets"></a>
+    <a title="Information page" id="box" href="infopatient.html"><img src="question.png" width="16" height="16" alt="Question"></a>
+  </div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #800020;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container .btn:hover {
+    background-color: black;
+}
+</style>
+</head>
+<center>
+<h1 title="Games" style="color:#800020;"> Games </h1>
+</center>
+<body>
+
+<div class="row">
+  <div class="column">
+    <div class="container">
+      <img src="https://i.vimeocdn.com/portrait/1749572_300x300.png" alt="Snow" style="width:100%">
+      <button title="dakim" onclick="location.href = 'https://dbfweb.dakim.com/game/'" type = "button" class="btn">Dakim</button>
+
+    </div>
+  </div>
+  <div class="column">
+    <div class="container">
+      <img src="matchthepictures.png" alt="Snow" style="width:100%">
+      <button title="Match the Pictures" onclick="location.href = 'https://www.brightfocus.org/alzheimers/memory-games/match-pictures'" type = "button" class="btn">Match the Picture</button>
+
+    </div>
+  </div>
+  <div class="column">
+    <div class="container">
+      <img src="crossword.png" alt="Snow" style="width:100%">
+      <button title="Crosswords" onclick="location.href = 'https://www.brightfocus.org/alzheimers/memory-games/universal-crossword-puzzle'" type = "button" class="btn">Crossword</button>
+
+  </div>
+</div>
+</div>
+<div class="row">
+<div class="column">
+  <div class="container">
+    <img src="sudoku.png" alt="Snow" style="width:100%">
+    <button title="Sudoku" onclick="location.href = 'https://www.brightfocus.org/alzheimers/memory-games/sudoku-daily'" type = "button" class="btn">Sudoku</button>
+</div>
+</div>
+<div class="column">
+  <div class="container">
+    <img src="matchthewords.png" alt="Snow" style="width:100%">
+    <button title="Match the words" onclick="location.href = 'https://www.brightfocus.org/alzheimers/memory-games/match-words'" type = "button" class="btn">Match the words</button>
+</div>
+</div>
+</div>
+
+</html>

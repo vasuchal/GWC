@@ -1,0 +1,201 @@
+<html>
+<head>
+  <style>
+  div.topnav {
+    box-shadow: 0px 6px 6px grey;
+    height: 48px;
+  }
+  </style>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+      background-color:white;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #800020;
+    color: white;
+    padding: 30px 50px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 25px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+    a {
+    color: white;
+}
+}
+</style>
+</head>
+<body>
+
+<center><h2 title="Patient Login Form" style="color:white;font-size:30px;background-color:#800020;">Patient Login Form</h2><center>
+
+<button title="Log In Button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<img  title="Stay Organized" id="calendar" src="calendar.png" width="300" height="300" alt="Calendar"><img title="Improve Focus" id="brain" src="brain.jpeg" width="300" height="300" alt="brain"><img   title="Stay Connected" id="family" src="family.png" width="300" height="300" alt="fam">
+
+<h1 title="Stay Organized" id="head" style="color:#800020;font-family:16px;">Stay Organized!</h1>
+<h1 title="Improve Focus" id="head2" style="color:#800020;font-family:16px;">Improve Focus!</h1>
+<h1 title="Stay Connected" id="head3" style="color:#800020;font-family:16px;">Stay Connected!</h1>
+
+
+
+
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="patient.jpeg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label title="Username" for="uname"><b>Username</b></label>
+      <input title="Enter Username" type="text" placeholder="Enter Username" name="uname" required>
+
+      <label title="Password" for="psw"><b>Password</b></label>
+      <input title="Enter Password" type="password" placeholder="Enter Password" name="psw" required>
+
+      <button title="Log in button" onclick="location.href='indexpatient.html'" type="button">Log In</button>
+      <label>
+        <input title="Click here if you agree to the Terms and Conditions"type="checkbox" checked="checked" name="remember"> I agree to the Terms and Conditions <a title="Terms and Conditions" href="https://www.google.com/">Terms and Conditions</a>
+      </label>
+      <p title="DISCLAIMER: ONCE YOU ARE LOGGED IN, YOUR ACCOUNT WILL BE SAVED AND YOU WILL CONTINUE TO BE LOGGED IN. ONLY YOUR DESIGNATED CAREGIVER WILL BE ABLE TO LINK TO YOUR ACCOUNT IN ORDER TO ASSIST YOU WITH ANY TASKS.">DISCLAIMER: ONCE YOU ARE LOGGED IN, YOUR ACCOUNT WILL BE SAVED AND YOU WILL CONTINUE TO BE LOGGED IN. ONLY YOUR DESIGNATED CAREGIVER WILL BE ABLE TO LINK TO YOUR ACCOUNT IN ORDER TO ASSIST YOU WITH ANY TASKS.</p>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button title="Cancel Button" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<center><a style="color:white;" href="patientorcaretaker.html"><button title="Click here to return to the previous page" id="butt" style="font-size:15px;color:white;height:5px;">Return to previous page</button></a></center>
+
+</body>
+</html>

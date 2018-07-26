@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
+  <style>
+  div.topnav {
+    box-shadow: 0px 6px 6px grey;
+    height: 48px;
+  }
+  </style>
+  <div class="topnav">
+    <form method="get" action="infopatient.html">
+        <button title="Information Page" id="box5" style="border-radius:15px;background-color:#800020;" type="submit"><img src="question.png" height="20" width="20"></button>
+    </form>
+    <form method="get" action="indexpatient.html">
+      <button title="Home Page" class="active" type="submit" style="border-radius:15px;background-color:#800020;"> <img src="home.png" width="20" height="20" alt="Planets"></button>
+</form>
+  </div>
+  <link rel="stylesheet" href="index.css">
+</head>
+<style>
+#myProgress {
+  width: 90%;
+  margin-left: 55px;
+  background-color: #FA9684;
+  border: 3px solid #FEFCFF;
+}
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #800020;
+<html>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
+}
+</style>
+<body>
+<center>
+<h1 style="margin-top:10px;color:#800020;">Where am I?</h1>
+</center>
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<center>
+<button title="Find me" style="border-radius:15px;background-color:#800020;color:white;"onclick="move()">Find Me</button>
+<script>
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+</script>
+</center>
+<br>
+<br>
+<br>
+
+<center><img title="map with your location" src="http://3.bp.blogspot.com/-0XLvAj8sQWE/VAc0nQWb-HI/AAAAAAAAPRQ/z5MKTJ1SaqQ/s1600/malaysia.png" height="70%" width="70%" border=width="30px"/>
+</body></center>
+</html>

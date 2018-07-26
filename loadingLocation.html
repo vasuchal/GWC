@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myProgress {
+  width: 90%;
+  margin-left: 55px;
+  background-color: #FA9684;
+  border: 3px solid #FEFCFF;
+}
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #800020;
+<html>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
+}
+button.btn {
+  padding: 20px;
+  font-size: 30px;
+  color: #800020;
+  background-color: #FEFCFF;
+  border: 2px solid #800020;
+}
+</style>
+<body>
+  <center>
+<h1 style="margin-top:130px">Where am I?</h1>
+</center>
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+<br>
+<center>
+<button id="btn" onclick="move()">Find Maria</button>
+<script>
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+</script>
+<br>
+<br>
+<div><img src="http://3.bp.blogspot.com/-0XLvAj8sQWE/VAc0nQWb-HI/AAAAAAAAPRQ/z5MKTJ1SaqQ/s1600/malaysia.png" height="70%" width="70%" border=width="30px"/></div>
+</center>
+</body>
+</html>
