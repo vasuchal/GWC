@@ -6,6 +6,52 @@
  	 <link href="index1.css" rel="stylesheet" type="text/css"/>
 	 <script src="index.js"></script>
   	<style>
+  	   #indexHomepage{ 
+            animation: fadeInAnimation ease 2s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; 
+        } 
+        @keyframes fadeInAnimation { 
+            from { 
+                opacity: 0; 
+            } 
+            to { 
+                opacity: 1; 
+            } 
+        } 
+        
+        p, button{ 
+            animation: fadeInAnimation2 ease 5s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; 
+        } 
+        @keyframes fadeInAnimation2 { 
+            from { 
+                opacity: 0; 
+            } 
+            to { 
+                opacity: 1; 
+            } 
+        } 
+        
+  	  h1{
+  		animation-name:test;
+  		animation-duration: 3s;
+ 
+  		}
+ 
+  	@keyframes test{
+	  from{
+	  	 margin-left:100%;
+ 		 width:20%
+  		}
+  		to {
+  		 margin-left:0%;
+ 		 width:100%
+ 		 }
+ 
+  	}
+  	  
   	  div.topnav {
     	box-shadow: 0px 6px 6px grey;
    		height: 48px;
