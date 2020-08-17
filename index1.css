@@ -1,3 +1,15 @@
+#indexHomepage{
+background-color:#800020;
+color:white;
+text-align:center;
+width:80%;
+height:450px;
+margin:auto;
+font-size:20px;
+border-radius: 40px;
+
+}
+
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -18,8 +30,7 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #FFD240
-;
+    background-color: #C70039;
     color: white;
 }
 
