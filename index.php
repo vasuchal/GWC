@@ -23,7 +23,21 @@
 		overflow: scroll;
 
 		}
-  
+  		button{
+  			background-color: white;
+  			padding: 15px 32px;
+  			text-align: center;
+  			display: inline-block;
+  			transition-duration: 0.4s;
+  			border: none;
+  			color:#800020;
+  		}
+  		
+  		button:hover{
+  			background-color:#C70039;
+  			color:white;
+  		}
+  		
 	</style>
 	<div class="topnav">
 	    <a title="home page" class ="active" href="index.php"><img src="home.png" width="20" height="20" alt="Planets"></a>
@@ -33,6 +47,7 @@
 	    <a title="About" href="about.html"><img src="plus.jpeg" width="30" height="30" alt="Plus"></a>
 	    <a id="Add" href="signup.html">Logout</a>
 	</div>
+
 
 	</head>
 	<body>
@@ -44,7 +59,7 @@
 			Patients with Alzheimers often feel isolated and scared. <strong>Recollect</strong> is a steady companion to Alzheimers patients in the beginning to middle stages of their conditions.</p>
 			<p>You are using <strong>Recollect</strong>, an application to help you go about your daily life. Recollect keeps track of your tasks, reminders, and location. It allows you to connect with
 		 	your caretaker from anywhere that you might be, and gives you the freedom to continue with your life, even after your diagnosis.</p>
-			<button style="font-size:20px;color:#800020;border-radius:20px;" onclick="Disclaimer()"> <strong>Disclaimer</strong> </button>
+			<button style="font-size:20px;border-radius:20px;" onclick="Disclaimer()"> <strong>Disclaimer</strong> </button>
 			<br>
 			<br>
 			<div id="disclaimer">
