@@ -5,3 +5,32 @@ function Disclaimer(){
 				
 
 		}
+		
+		
+//this is my function that checks if password and confirmation match
+
+function Confirm(){
+
+//this gets the values of the two input boxes of password and then the confirmation using document.getElementById
+
+	var Pass = document.getElementById("password").value;
+	var confirmPass = document.getElementById("confirmation").value;
+	
+	//using an if loop, it checks if they are not equal
+	//the string() converts to a string just in case
+	 if(String(Pass) !== String(confirmPass)){
+	//if they are not equal, then the paragraph tag with id confirmationMessage  prints the below message in the color red
+	document.getElementById("confirmationMessage").innerHTML = "*Password confirmation is not matched, do not submit!*";
+	document.getElementById("confirmationMessage").style.color= "Tomato";
+	}
+else if (String(Pass) == String(confirmPass)){
+	//if they are  equal, then the paragraph tag with id confirmationMessage  prints the below message in the color green
+
+	document.getElementById("confirmationMessage").innerHTML = "*Password is matched, please click submit!*";
+	document.getElementById("confirmationMessage").style.color= "MediumSeaGreen";
+
+
+	}
+
+
+}

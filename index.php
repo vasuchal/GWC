@@ -35,12 +35,12 @@
         } 
         
   	  h1{
-  		animation-name:test;
+  		animation-name:leftSlide;
   		animation-duration: 3s;
  
   		}
  
-  	@keyframes test{
+  	@keyframes leftSlide{
 	  from{
 	  	 margin-left:100%;
  		 width:20%
