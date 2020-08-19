@@ -10,32 +10,11 @@
 /* Set a style for all buttons */
 body{
 	text-align:center;
-	
 
-}
-img{
-
-	animation: rotation 8s infinite linear;
-
-
-
-}
-
-
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
 }
 
 h1{
 	animation: emphasize 2s 1;
-
-
 }
 
 @keyframes emphasize{
@@ -47,14 +26,12 @@ h1{
     	font-size:65px;
 	  }	
 
-
 }
 
 p{
 	color:#800020;	
 	animation: opacity 3s 1;
 	font-size:20px;
-
 }
 
 @keyframes opacity{
@@ -80,10 +57,8 @@ button {
     animation-name:colorChange;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-delay: 3s;
-
+    animation-delay: 2s;
 }
-
 
 @keyframes colorChange{
 	  from{
@@ -107,22 +82,26 @@ span{
 
 }
 
-
 #signup{
 
 width:500px;
 margin:auto;
 
-
 }
-
 
 
 </style>
 <body>
 <center>  <h1 title="Welcome to Recollect" style="color:#800020;font-size:65px;">Welcome to Recollect</h1></center>
-<div id="signup"><p> Recollect is an interactive tool for Alzheimers patients and their caregivers to facilitate their everyday activities. 	Recollect helps patients in a variety of activities ranging from reminding them of their loved ones to finding their locations. Click on one of the buttons below to get started!</p><div>
-
+<div id="signup">
+	<p> Recollect is an interactive tool for Alzheimers patients and their caregivers to facilitate their everyday activities. 	Recollect helps patients in a variety of activities ranging from reminding them of their loved ones to finding their locations. Click on one of the buttons below to get started!</p>
+</div>
 
 <center><a href="details.php"><button style ="font-size:20px" title="Click here to create an account!If you already have one, click the link below which will take you to the log in page.">Create an Account</button></a></center>
 <center><a href="patientorcaretaker.html"><button title="Click here to get to the Log In page" style="font-size:20px;">Go to Login Page <br><span>(I already have an account)</span></button></a></center>
+<br>
+<p>
+	<img src="calendar.png" height="200" width="250"> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+	<img src="track.png" height="200" width="250"> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+	<img src="family.png"height="200" width="250">
+</p>
