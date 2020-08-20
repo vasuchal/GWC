@@ -171,3 +171,12 @@ left:30px;
     <button type="reset" value="Reset">Reset</button>
   </div>
   </form>
+<?php
+
+$user_name = $_COOKIE["username"];
+echo $user;
+
+?>
+
+
+</body>
