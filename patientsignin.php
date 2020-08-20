@@ -141,6 +141,11 @@ left:30px;
 	margin-left:12%;
 }
 </style>
+<?php
+include 'config.php';
+$user_name = $_COOKIE["username"];
+
+?>
 <body>
   <img id="gear2" src ="gear2.png" height="80" width="80">
   <img id="gear1" src ="gear1.png" height="80" width="80">
@@ -171,12 +176,5 @@ left:30px;
     <button type="reset" value="Reset">Reset</button>
   </div>
   </form>
-<?php
-
-$user_name = $_COOKIE["username"];
-echo $user;
-
-?>
-
 
 </body>

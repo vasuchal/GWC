@@ -159,66 +159,6 @@ right:20px;
 }
 </style>
 <body>
-<img id="gear2" src ="gear2.png" height="80" width="80">
-<img id="gear1" src ="gear1.png" height="80" width="80">
-<img id="gear3" src ="gear3.png" height="80" width="80">
-<img id="gear5" src ="gear2.png" height="80" width="80">
-<img id="gear4" src ="gear1.png" height="80" width="80">
-<img id="gear6" src ="gear3.png" height="80" width="80">
-  <h1> CareTaker Account Information </h1>  
-<hr style="height:2px;color:#800020;background-color:#C70039;width:70%;">
-
-  <!--I added a horizontal line because it divides up the different parts of the form and makes it look more clean and organized.-->
-  <!--Below is my code for the text-fields, and they ask for Personal Information to place the pizza order. I also connected it to my other html webpage, so that when you click on submit it leads you to a thank you page.-->
-<form action="<?php echo $_SERVER["PHP_SELF"];?>" enctype="multipart/form-data" method="post">
-   <fieldset>
-    <br>
-    <br>
-    <label>First Name:</label> <input name="first" type="text" value="" autofocus required><br><br>
-   <label> Last Name: </label><input name="last" type="text" value="" autofocus required><br><br>
-   <label> Phone Number:</label><input name= "phone" type="text" value="" autofocus required><br><br>
-    <br>
-    <br>
-    </fieldset>
-    <!--I added another horizontal rule.-->
-    <br>
-  <hr style="height:2px;color:#800020;background-color:#C70039;width:70%;">
-  <br>
-  <fieldset>
-  <br>
-  <br>
-  <label> Username: </label> <input name="username" type="text" value="" autofocus required><br>
-  <label> Password: </label><input name="password" id="password" type="password" value="" autofocus required><br>
-  <label> Confirm Password:</label> <input id="confirmation" type="password" value="" autofocus required onchange="Confirm()">
-  <br>
-  <p id="confirmationMessage"></p>
-  <input type="checkbox" onclick="showPass()">Show Password
-
-   </fieldset>
-
-  <br>
-
-  <!--Below are my buttons for submit and reset which I learned from W3 schools.-->
-  <div id="buttons">
-  <button onclick="location.href='signup.html'" type="button">Return to Previous Page</button> &nbsp &nbsp &nbsp
-   <button type="submit" value="Submit" name="Submit">Submit</button> &nbsp &nbsp&nbsp&nbsp
-    <button onclick="location.href='patientsignin.php'" type="button">Next Page</button>
-    </div>
-  </form>
-<script>
-
-function showPass() {
-    var x = document.getElementById("password");
-  	if (x.type === "password") {
-  	  x.type = "text";
-  		} 
-  	else {
-   	  x.type = "password";
-  		}
-  		
-}
-
-</script>
 <?php 
 //this includes the configuration
 
@@ -288,11 +228,66 @@ if (!empty($_POST['Submit'])){
   					//echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 				}
 	}	
-
-
-	
-
 ?>
+<img id="gear2" src ="gear2.png" height="80" width="80">
+<img id="gear1" src ="gear1.png" height="80" width="80">
+<img id="gear3" src ="gear3.png" height="80" width="80">
+<img id="gear5" src ="gear2.png" height="80" width="80">
+<img id="gear4" src ="gear1.png" height="80" width="80">
+<img id="gear6" src ="gear3.png" height="80" width="80">
+  <h1> CareTaker Account Information </h1>  
+<hr style="height:2px;color:#800020;background-color:#C70039;width:70%;">
 
-  
+  <!--I added a horizontal line because it divides up the different parts of the form and makes it look more clean and organized.-->
+  <!--Below is my code for the text-fields, and they ask for Personal Information to place the pizza order. I also connected it to my other html webpage, so that when you click on submit it leads you to a thank you page.-->
+<form action="<?php echo $_SERVER["PHP_SELF"];?>" enctype="multipart/form-data" method="post">
+   <fieldset>
+    <br>
+    <br>
+    <label>First Name:</label> <input name="first" type="text" value="" autofocus required><br><br>
+   <label> Last Name: </label><input name="last" type="text" value="" autofocus required><br><br>
+   <label> Phone Number:</label><input name= "phone" type="text" value="" autofocus required><br><br>
+    <br>
+    <br>
+    </fieldset>
+    <!--I added another horizontal rule.-->
+    <br>
+  <hr style="height:2px;color:#800020;background-color:#C70039;width:70%;">
+  <br>
+  <fieldset>
+  <br>
+  <br>
+  <label> Username: </label> <input name="username" type="text" value="" autofocus required><br>
+  <label> Password: </label><input name="password" id="password" type="password" value="" autofocus required><br>
+  <label> Confirm Password:</label> <input id="confirmation" type="password" value="" autofocus required onchange="Confirm()">
+  <br>
+  <p id="confirmationMessage"></p>
+  <input type="checkbox" onclick="showPass()">Show Password
+
+   </fieldset>
+
+  <br>
+
+  <!--Below are my buttons for submit and reset which I learned from W3 schools.-->
+  <div id="buttons">
+  <button onclick="location.href='signup.html'" type="button">Return to Previous Page</button> &nbsp &nbsp &nbsp
+   <button type="submit" value="Submit" name="Submit">Submit</button> &nbsp &nbsp&nbsp&nbsp
+    <button onclick="location.href='patientsignin.php'" type="button">Next Page</button>
+    </div>
+  </form>
+<script>
+
+function showPass() {
+    var x = document.getElementById("password");
+  	if (x.type === "password") {
+  	  x.type = "text";
+  		} 
+  	else {
+   	  x.type = "password";
+  		}
+  		
+}
+
+</script>
+
 </body>
