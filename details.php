@@ -181,7 +181,7 @@ if (!empty($_POST['Submit'])){
 	if (mysqli_query($conn,$sql)) {
 	  $cookie_name = "username";	
  	  $cookie_value = $_POST["username"];
-	  setcookie($cookie_name,$cookie_value, time() + (86400 * 30));	
+	  setcookie($cookie_name,$cookie_value, time() + (86400 * 30));
 	} 
 	else {
    	  //echo "Error creating database: " . mysqli_error($conn);
@@ -206,7 +206,9 @@ if (!empty($_POST['Submit'])){
 
 	//checks for errors within creation of Table
 	if (mysqli_query($conn, $sql)) {
-   		alert("Success! Now it is time to register your patient, click the Next Page button below to proceed") ;
+   		alert("Success! Now it is time to register your patient, taking you to the next page!") ;
+		header("refresh:1;url=patientsignin.php");
+
 	} 
 	else {
     	//echo "Error creating table: " . mysqli_error($conn);
@@ -261,7 +263,7 @@ if (!empty($_POST['Submit'])){
   <label> Password: </label><input name="password" id="password" type="password" value="" autofocus required><br>
   <label> Confirm Password:</label> <input id="confirmation" type="password" value="" autofocus required onchange="Confirm()">
   <br>
-  <p id="confirmationMessage"></p>
+  <p id="confirmationMessage">Please confirm your password</p>
   <input type="checkbox" onclick="showPass()">Show Password
 
    </fieldset>

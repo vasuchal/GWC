@@ -142,8 +142,62 @@ left:30px;
 }
 </style>
 <?php
+
 include 'config.php';
+function alert($msg){
+	echo "<script> alert('$msg')</script>";
+
+}
 $user_name = $_COOKIE["username"];
+if (mysqli_select_db($conn,$user_name)){
+	 if (!empty($_POST['Submit'])){
+	$first_name = $_POST["first"];
+	$last_name = $_POST["last"];
+	
+	$sql = "CREATE TABLE patient (
+	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	firstname VARCHAR(30) NOT NULL,
+	lastname VARCHAR(30) NOT NULL,
+	longtitude INT(10) NOT NULL,
+	latitude INT(10) NOT NULL,
+	unique key(firstname, lastname)
+	)";
+
+	//checks for errors within creation of Table
+	if (mysqli_query($conn, $sql)) {
+		//echo "Success";
+	} 
+	else {
+    	//echo "Error creating table: " . mysqli_error($conn);
+
+	}
+	
+	
+	  $sql ="INSERT IGNORE INTO patient (firstname, lastname)
+	   VALUES ('$first_name', '$last_name')";
+
+	//after their information is inserted, if it goes through successfully, it prompts them to head to the log-in page through text and a button that links to login.php
+	if (mysqli_query($conn, $sql)) {
+					header("refresh:1;url=patientorcaretaker.html");
+
+				} 
+
+	else {
+  					//echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+				}				
+	
+	 }
+	 
+}
+
+else{
+
+	alert("Please fill out and submit the caretaker form first! Then proceed here");
+
+
+}
+
+
 
 ?>
 <body>
@@ -159,9 +213,8 @@ $user_name = $_COOKIE["username"];
    <fieldset>
    <!--I added a legend tag which I learned from W3 schools, and I also learned how to use field-style.-->
     <br>
-    <label>First Name: </label><input type="text" autofocus required><br>
-    <label>Last Name: </label><input type="text" autofocus required><br>
-    <label>Password: </label><input value="Password will be the same as caretaker's" type="text" autofocus required><br>
+    <label>First Name: </label><input type="text" value=" " name="first" required><br>
+    <label>Last Name: </label><input type="text" value=" " name="last" required><br>
 
     <br>
     </fieldset>
@@ -172,7 +225,7 @@ $user_name = $_COOKIE["username"];
   <!--Below are my buttons for submit and reset which I learned from W3 schools.-->
   <div id="buttons">
   <button onclick="location.href='details.php'" type="button">Return to Previous Page</button>&nbsp &nbsp&nbsp&nbsp
-   <button type="submit" value="Submit">Submit<br> <span>(You will know be redirected to the Log In Page)</span></button>&nbsp &nbsp&nbsp&nbsp
+   <button type="submit" name="Submit" value="Submit">Submit<br> <span>(You will know be redirected to the Log In Page)</span></button>&nbsp &nbsp&nbsp&nbsp
     <button type="reset" value="Reset">Reset</button>
   </div>
   </form>
