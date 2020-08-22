@@ -178,7 +178,7 @@ if (mysqli_select_db($conn,$user_name)){
 
 	//after their information is inserted, if it goes through successfully, it prompts them to head to the log-in page through text and a button that links to login.php
 	if (mysqli_query($conn, $sql)) {
-					header("refresh:1;url=patientorcaretaker.html");
+					header("refresh:0;url=patientorcaretaker.html");
 
 				} 
 
@@ -213,8 +213,8 @@ else{
    <fieldset>
    <!--I added a legend tag which I learned from W3 schools, and I also learned how to use field-style.-->
     <br>
-    <label>First Name: </label><input type="text" value=" " name="first" required><br>
-    <label>Last Name: </label><input type="text" value=" " name="last" required><br>
+    <label>First Name:</label> <input name="first" type="text" value="" autofocus required><br>
+    <label>Last Name:</label> <input name="last" type="text" value="" autofocus required><br>
 
     <br>
     </fieldset>
@@ -228,6 +228,6 @@ else{
    <button type="submit" name="Submit" value="Submit">Submit<br> <span>(You will know be redirected to the Log In Page)</span></button>&nbsp &nbsp&nbsp&nbsp
     <button type="reset" value="Reset">Reset</button>
   </div>
-  </form>
+</form>
 
 </body>

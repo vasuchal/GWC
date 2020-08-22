@@ -207,7 +207,7 @@ if (!empty($_POST['Submit'])){
 	//checks for errors within creation of Table
 	if (mysqli_query($conn, $sql)) {
    		alert("Success! Now it is time to register your patient, taking you to the next page!") ;
-		header("refresh:1;url=patientsignin.php");
+		header("refresh:0;url=patientsignin.php");
 
 	} 
 	else {
