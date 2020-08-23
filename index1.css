@@ -41,46 +41,7 @@ border-radius: 40px;
     color: white;
 }
 
-#calendar {
-  position:absolute;
-  top:200px;
-  left:100px;
-}
 
-#head {
-  position:absolute;
-  top:140px;
-  left:140px;
-}
-
-#head2 {
-  position:absolute;
-  top:140px;
-  left:530px;
-}
-
-#head3 {
-  position:absolute;
-  top:140px;
-  left:910px;
-}
-
-#butt {
-  position:absolute;
-  top:500px;
-  left:10px;
-}
-#brain {
-  position:absolute;
-  top:200px;
-  left:500px;
-}
-
-#family{
-  position:absolute;
-  top:200px;
-  left:900px;
-}
 
 #box{
   position:absolute;
