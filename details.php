@@ -263,7 +263,7 @@ if (!empty($_POST['Submit'])){
   <label> Password: </label><input name="password" id="password" type="password" value="" autofocus required><br>
   <label> Confirm Password:</label> <input id="confirmation" type="password" value="" autofocus required onchange="Confirm()">
   <br>
-  <p id="confirmationMessage">Please confirm your password</p>
+  <p id="confirmationMessage"></p>
   <input type="checkbox" onclick="showPass()">Show Password
 
    </fieldset>
