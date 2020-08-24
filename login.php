@@ -205,6 +205,29 @@ input[type=text], input[type=password] {
 
 </style>
 </head>
+<?php
+include 'config.php';
+function alert($msg){
+	echo "<script> alert('$msg')</script>";
+}
+
+if (!empty($_POST['Submit'])){
+ 	 $username = $_POST["username"];
+	$password = $_POST["password"];
+	$sql = "CREATE DATABASE IF NOT EXISTS ".$username;
+}
+
+if (!empty($_POST['Submit'])){
+	if (mysqli_select_db($conn,$username)){
+	
+	}
+	
+	else{
+		alert("Incorrect username or password, please try again! If you dont have an account, please create one.");
+	}
+}
+
+?>
 <body>
 <h1> CareTaker Login </h1>
 <p><button id="login" title="Log In" onclick="document.getElementById('mod').style.display='block'" style="width:auto;">Login</button>
@@ -228,7 +251,7 @@ input[type=text], input[type=password] {
       <input title="enter password" type="password" name="password" value="" required>
       <br>
       <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" name="Submit" value="Submit" id="sub" style="width:150px;font-size:20px;">Submit</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" name="Submit" value="Submit" id="sub" style="width:200px;font-size:20px;">Log In</button>
     </div>
     <div class="container" style="background-color:#800020">
      <center> <button title="cancel" type="button" onclick="document.getElementById('mod').style.display='none'" class="cancelbtn">Cancel</button></center>

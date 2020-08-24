@@ -149,6 +149,7 @@ function alert($msg){
 
 }
 $user_name = $_COOKIE["username"];
+$password = $_COOKIE["password"];
 if (mysqli_select_db($conn,$user_name)){
 	 if (!empty($_POST['Submit'])){
 	$first_name = $_POST["first"];
@@ -158,6 +159,7 @@ if (mysqli_select_db($conn,$user_name)){
 	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	firstname VARCHAR(30) NOT NULL,
 	lastname VARCHAR(30) NOT NULL,
+	password VARCHAR(30) NOT NULL,
 	longtitude INT(10) NOT NULL,
 	latitude INT(10) NOT NULL,
 	unique key(firstname, lastname)
@@ -173,8 +175,8 @@ if (mysqli_select_db($conn,$user_name)){
 	}
 	
 	
-	  $sql ="INSERT IGNORE INTO patient (firstname, lastname)
-	   VALUES ('$first_name', '$last_name')";
+	  $sql ="INSERT IGNORE INTO patient (firstname, lastname, password)
+	   VALUES ('$first_name', '$last_name','$password')";
 
 	//after their information is inserted, if it goes through successfully, it prompts them to head to the log-in page through text and a button that links to login.php
 	if (mysqli_query($conn, $sql)) {

@@ -181,7 +181,10 @@ if (!empty($_POST['Submit'])){
 	if (mysqli_query($conn,$sql)) {
 	  $cookie_name = "username";	
  	  $cookie_value = $_POST["username"];
+ 	  $cookie_name2 = "password";
+ 	  $cookie_value2 = $password;
 	  setcookie($cookie_name,$cookie_value, time() + (43200));
+	  setcookie($cookie_name2,$cookie_value2, time() + (43200));
 	} 
 	else {
    	  //echo "Error creating database: " . mysqli_error($conn);
