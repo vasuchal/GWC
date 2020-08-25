@@ -213,19 +213,31 @@ function alert($msg){
 
 if (!empty($_POST['Submit'])){
  	 $username = $_POST["username"];
-	$password = $_POST["password"];
-	$sql = "CREATE DATABASE IF NOT EXISTS ".$username;
+	 $password = $_POST["password"];
+	 $sql = "CREATE DATABASE IF NOT EXISTS ".$username;
 }
 
 if (!empty($_POST['Submit'])){
 	if (mysqli_select_db($conn,$username)){
-	
+		$sql="SELECT password FROM caretaker";
+		$result = mysqli_query($conn,$sql);
+		$data = mysqli_fetch_array($result, MYSQLI_NUM);
+		$passwordCheck = $data[0];
+		if ($passwordCheck == $password){
+			 header("refresh:0;url=index.php");
+		}
+		
+		else{
+			alert("Incorrect password, please try again!");
+
+		}
 	}
 	
 	else{
-		alert("Incorrect username or password, please try again! If you dont have an account, please create one.");
+		alert("Incorrect username, please try again! If you dont have an account, please create one.");
 	}
 }
+
 
 ?>
 <body>

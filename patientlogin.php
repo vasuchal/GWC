@@ -201,8 +201,45 @@ input[type=text], input[type=password] {
 
 </style>
 </head>
-<body>
 
+<?php
+include 'config.php';
+function alert($msg){
+	echo "<script> alert('$msg')</script>";
+}
+
+if (!empty($_POST['Submit'])){
+ 	 $username = $_POST["username"];
+	 $password = $_POST["password"];
+	 $sql = "CREATE DATABASE IF NOT EXISTS ".$username;
+}
+
+if (!empty($_POST['Submit'])){
+	if (mysqli_select_db($conn,$username)){
+		$sql="SELECT password FROM patient";
+		$result = mysqli_query($conn,$sql);
+		$data = mysqli_fetch_array($result, MYSQLI_NUM);
+		$passwordCheck = $data[0];
+		if ($passwordCheck == $password){
+			 alert("Success! Note: Once patient is logged in, they will not be able to log out unless approved by caretaker.");
+			 header("refresh:2;url=indexpatient.html");
+		}
+		
+		else{
+			alert("Incorrect password, please try again!");
+
+		}
+	}
+	
+	else{
+		alert("Incorrect username, please try again! If you dont have an account, please create one.");
+	}
+}
+
+
+?>
+
+<body>
 
 <h1> Patient Login </h1>
 <p><button id="login" title="Log In" onclick="document.getElementById('mod').style.display='block'" style="width:auto;">Login</button>
