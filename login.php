@@ -30,7 +30,7 @@ p{
 	text-align:center;
 }
 
-h1,p{	animation: fade 4s 1;
+h1,p{	animation: fade 2s 1;
 
 }
 
@@ -224,6 +224,15 @@ if (!empty($_POST['Submit'])){
 		$data = mysqli_fetch_array($result, MYSQLI_NUM);
 		$passwordCheck = $data[0];
 		if ($passwordCheck == $password){
+			 $sql = "SELECT firstname,lastname FROM caretaker";
+			 $result = mysqli_query($conn, $sql);
+			 $nameData = mysqli_fetch_array($result, MYSQLI_NUM);
+			 $firstname = $nameData[0];
+			 $lastname = $nameData[1];
+			 $cookiename = "firstname";
+			 $cookiename2 = "lastname";
+			 setcookie($cookiename, $firstname, time() + (43200));
+			 setcookie($cookiename2, $lastname, time() + (43200));
 			 header("refresh:0;url=index.php");
 		}
 		

@@ -11,6 +11,7 @@
             animation-iteration-count: 1; 
             animation-fill-mode: forwards; 
         } 
+        
         @keyframes fadeInAnimation { 
             from { 
                 opacity: 0; 
@@ -43,7 +44,7 @@
   	@keyframes leftSlide{
 	  from{
 	  	 margin-left:100%;
- 		 width:20%
+ 		 width:100%
   		}
   		to {
   		 margin-left:0%;
@@ -98,7 +99,9 @@
 	</head>
 	<body>
 	<?php
-		echo"<h1 style='color:#800020;font-size:40px;text-align:center;'>About Recollect</h1>";
+		$firstname = $_COOKIE["firstname"];
+		$lastname = $_COOKIE["lastname"];
+		echo"<h1 style='color:#800020;font-size:40px;text-align:center;'>Welcome to Recollect, ".$firstname." ".$lastname."!</h1>";
 		
 		?>
 		
