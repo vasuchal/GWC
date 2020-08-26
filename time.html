@@ -9,34 +9,32 @@
     height: 48px;
   }
   </style>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index1.css">
   <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
   <script src="index.js"></script>
-  <link rel="stylesheet" href="index.css">
-  <div class="topnav">
-    <form method="get" action="infopatient.html">
-        <button id="box5" style="border-radius:15px;background-color:#800020;" type="submit"><img src="question.png" height="20" width="20"></button>
-    </form>
-    <form method="get" action="indexpatient.html">
-    <button class="active" type="submit" style="border-radius:15px;background-color:#800020;"> <img src="home.png" width="20" height="20" alt="Planets"></button>
+   <div class="topnav">
+    <a title="Home page"class="active" href="indexpatient.php"><img src="home.png" width="20" height="20" alt="Planets"></a>
+    <a title="Information page" id="box" href="infopatient.html"><img src="question.png" width="16" height="16" alt="Question"></a>
   </div>
 </head>
+
 <body>
   <br>
   <br>
-
   <center>
   <p behavior="scroll" bgcolor="yellow" loop="-1" width="100%" >
-    <i><font color="#A30F0F  "><font size="30"><strong></strong>  <script language="javascript">
+  <i><font color="#A30F0F"><font size="30"><strong>
+    <script>
      var today = new Date();
      document.write(today);
-     </script>: </font></i>
+     var hrs = today.getHours();
+     </script>: </font>
   </p>
-
+  </i></strong>  
   <br>
   <br>
 
-<canvas id="canvas" width="400" height="400"
+<canvas id="canvas" width="400" height="400">
 
 </canvas>
 <body background="yellowbkgd.jfif">
