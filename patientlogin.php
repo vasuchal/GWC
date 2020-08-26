@@ -222,7 +222,17 @@ if (!empty($_POST['Submit'])){
 		$passwordCheck = $data[0];
 		if ($passwordCheck == $password){
 			 alert("Success! Note: Once patient is logged in, they will not be able to log out unless approved by caretaker.");
-			 header("refresh:2;url=indexpatient.html");
+			 $sql = "SELECT firstname,lastname FROM patient";
+			 $result = mysqli_query($conn,$sql);
+			 $nameData = mysqli_fetch_array($result, MYSQLI_NUM);
+			 $firstname = $nameData[0];
+			 $lastname = $nameData[1];
+			 $cookiename = "firstname";
+			 $cookiename2 = "lastname";
+			 setcookie($cookiename, $firstname, time() + (43200));
+			 setcookie($cookiename2, $lastname, time() + (43200));
+			 header("refresh:1;url=indexpatient.php");
+	 
 		}
 		
 		else{

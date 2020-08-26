@@ -12,7 +12,6 @@
       <a title="Information page" id="box" href="infopatient.html"><img src="question.png" width="16" height="16" alt="Question"></a>
     </div>
 <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
-</head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;
       background-color:white}
@@ -53,103 +52,47 @@ button.who {
     background-color: #f44336;
 }
 
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
+h1{
+  	text-align:center;
+  	color:#800020;
+  	font-size:60px;
+  	font-family: "Times New Roman", Times, serif;
+  	animation: fade 3s 1;
 
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
 
-.container {
-    padding: 16px;
-}
+  
+  }
+  
+ 	button{
+ 	  	animation: fade 2s 1;
 
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
+ } 
+  @keyframes fade{
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-}
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
+	from {
+	    opacity:0;
+	  }
+	to {
+    	opacity:1;
+	  }	
 }
 </style>
+</head>
+<?php  
+	$firstname = $_COOKIE["firstname"];
+	$lastname = $_COOKIE["lastname"];
+	echo "<h1>Welcome, ".$firstname." ".$lastname."!</h1>";
+
+?>
 <body>
-  <p>
     <br>
     <br>
     <center>
 <form method="get" action="helppage.html">
     <button title="Help Me!" id="button4" style="border-radius:15px;" type="submit"><img src="help.png" height="100" width="100"><p><strong>Help!</p></strong></button>
 </form>
-</p>
-<form method="get" action="buttons.html">
-  <button title="Who Am I?" id="who" style="border-radius:15px;" class="active" type="submit" href="buttons.html"><img src="person.png" height="100" width="100"><p><strong>Who am I?</strong></p></button>
+<form method="get" action="profile.html">
+  <button title="Who Am I?" id="who" style="border-radius:15px;" class="active" type="submit" href="profile.html"><img src="person.png" height="100" width="100"><p><strong>Who am I?</strong></p></button>
 </form>
 <form method="get" action="patientcal.html">
   <button title="My Calendar" id="button2" style="border-radius:15px;" type="submit"><img src="cal.png" height="100" width="100"><p><strong>Calendar</strong></p></button>
