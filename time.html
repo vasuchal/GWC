@@ -8,6 +8,11 @@
     box-shadow: 0px 6px 6px grey;
     height: 48px;
   }
+  
+  body{
+  	  background-size: auto;
+
+  }
   </style>
   <link rel="stylesheet" href="index1.css">
   <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
@@ -19,25 +24,37 @@
 </head>
 
 <body>
-  <br>
-  <br>
   <center>
   <p behavior="scroll" bgcolor="yellow" loop="-1" width="100%" >
-  <i><font color="#A30F0F"><font size="30"><strong>
+  <i><font color="white"><font size="30"><strong>
     <script>
      var today = new Date();
-     document.write(today);
      var hrs = today.getHours();
-     </script>: </font>
+     if ((18 <= hrs && hrs <= 24) || (0 <= hrs && hrs <= 2)){
+     	document.body.style.background = "linear-gradient(to bottom right,#090442, #090442, #2B25A4, #6059AE, #A9A4E3)";
+     	document.write("Night Time!<br><br>");
+
+     }
+     
+     else if (3 <= hrs && hrs <= 17){
+     	document.body.style.background = "linear-gradient(to bottom right, #760F0F, #900C3F, #C70039,#DC4C2D,#ECA860, white)";
+     	document.write("Morning Time!<br><br>");
+     }
+     
+     
+     
+     document.write(today);
+
+     
+     </script> </font>
   </p>
   </i></strong>  
-  <br>
-  <br>
+  
 
 <canvas id="canvas" width="400" height="400">
 
 </canvas>
-<body background="yellowbkgd.jfif">
+<body>
 <script>
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
@@ -59,22 +76,22 @@ function drawFace(ctx, radius) {
   ctx.fillStyle = 'white';
   ctx.fill();
   grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
-  grad.addColorStop(0, '#333');
-  grad.addColorStop(0.5, 'white');
-  grad.addColorStop(1, '#333');
+  grad.addColorStop(0, 'black');
+  grad.addColorStop(0.5, 'black');
+  grad.addColorStop(1, 'black');
   ctx.strokeStyle = grad;
   ctx.lineWidth = radius*0.1;
   ctx.stroke();
   ctx.beginPath();
   ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
-  ctx.fillStyle = '#333';
+  ctx.fillStyle = 'black';
   ctx.fill();
 }
 
 function drawNumbers(ctx, radius) {
   var ang;
   var num;
-  ctx.font = radius*0.15 + "px arial";
+  ctx.font = radius*0.15 + "px Times";
   ctx.textBaseline="middle";
   ctx.textAlign="center";
   for(num = 1; num < 13; num++){
@@ -99,10 +116,10 @@ function drawTime(ctx, radius){
     hour=(hour*Math.PI/6)+
     (minute*Math.PI/(6*60))+
     (second*Math.PI/(360*60));
-    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    drawHand(ctx, hour, radius*0.5, radius*0.03);
     //minute
     minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
-    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    drawHand(ctx, minute, radius*0.8, radius*0.03);
     // second
     second=(second*Math.PI/30);
     drawHand(ctx, second, radius*0.9, radius*0.02);
