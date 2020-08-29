@@ -7,19 +7,24 @@
   div.topnav {
     box-shadow: 0px 6px 6px grey;
     height: 48px;
+    
   }
   
   body{
   	  background-size: auto;
+  	  box-shadow: inset 0 0 0px 1000px rgba(0,0,0,.15);
+
 
   }
+  
+
   </style>
   <link rel="stylesheet" href="index1.css">
   <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
   <script src="index.js"></script>
    <div class="topnav">
     <a title="Home page"class="active" href="indexpatient.php"><img src="home.png" width="20" height="20" alt="Planets"></a>
-    <a title="Information page" id="box" href="infopatient.html"><img src="question.png" width="16" height="16" alt="Question"></a>
+    <a title="Information page" id="box" href="infopatient.html"><img src="question.png" width="16" height="15" alt="Question"></a>
   </div>
 </head>
 
@@ -30,16 +35,29 @@
     <script>
      var today = new Date();
      var hrs = today.getHours();
-     if ((18 <= hrs && hrs <= 24) || (0 <= hrs && hrs <= 2)){
+     hrs = 10;
+     if ((19 <= hrs && hrs <= 24) || (0 <= hrs && hrs <= 2)){
      	document.body.style.background = "linear-gradient(to bottom right,#090442, #090442, #2B25A4, #6059AE, #A9A4E3)";
-     	document.write("Night Time!<br><br>");
+     	document.write("Time of Day: Night<br><br>");
 
      }
      
-     else if (3 <= hrs && hrs <= 17){
+     else if (3 <= hrs && hrs <= 10){
      	document.body.style.background = "linear-gradient(to bottom right, #760F0F, #900C3F, #C70039,#DC4C2D,#ECA860, white)";
-     	document.write("Morning Time!<br><br>");
+     	document.write("Time of Day: Morning<br><br>");
      }
+     
+     else if ( 10 < hrs && hrs <=14){
+     	document.body.style.background = "linear-gradient(to bottom right, #760F0F, #900C3F, #C70039,#DC4C2D,#ECA860, white)";
+     	document.write("Time of Day: Afternoon<br><br>");
+     }
+     
+     else if ( 14 < hrs && hrs < 19){
+     	document.body.style.background = "linear-gradient(to bottom right,#090442, #090442, #2B25A4, #6059AE, #A9A4E3)";
+     	document.write("Time of Day: Evening <br><br>");
+     }
+     
+     
      
      
      

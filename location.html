@@ -3,6 +3,30 @@
   <link rel="stylesheet" href="index1.css">
   <script src="index.js"></script>
   <style>
+  body{
+  	  font-family: "Times New Roman", Times, serif;
+
+  }
+   body{ 
+            animation: fadeInAnimation ease 1s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; 
+        } 
+   h1{
+      		animation: fadeInAnimation ease 2.5s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; 
+      
+      }
+        
+        @keyframes fadeInAnimation { 
+            from { 
+                opacity: 0; 
+            } 
+            to { 
+                opacity: 1; 
+            } 
+        }
   div.topnav {
     box-shadow: 0px 6px 6px grey;
     height: 48px;
@@ -19,15 +43,10 @@
 </div>
 <title>Location</title>
 </head>
-<body>
-
   <body>
-    <br>
     <center>
-    <h1 style="color:#800020";><font face="arial"><strong>Maria's Location</h1></strong>
-      <div style="align-content:left;"> Refreshed <strong> 3 </strong> minutes ago</div>
-      <br>
-      <div><img src="http://3.bp.blogspot.com/-0XLvAj8sQWE/VAc0nQWb-HI/AAAAAAAAPRQ/z5MKTJ1SaqQ/s1600/malaysia.png" height="70%" width="70%" border=width="30px"/></div>
+    <h1 style="color:#800020;font-size:60px;"><strong>Maria's Location</h1></strong>
+      <div><img src="http://3.bp.blogspot.com/-0XLvAj8sQWE/VAc0nQWb-HI/AAAAAAAAPRQ/z5MKTJ1SaqQ/s1600/malaysia.png" height="80%" width="80%" border=width="30px"/></div>
     </center>
   </body>
   </html>

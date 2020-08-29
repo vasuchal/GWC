@@ -101,7 +101,7 @@
 	<?php
 		$firstname = $_COOKIE["firstname"];
 		$lastname = $_COOKIE["lastname"];
-		echo"<h1 style='color:#800020;font-size:40px;text-align:center;'>Welcome to Recollect, ".$firstname." ".$lastname."!</h1>";
+		echo"<h1 style='color:#800020;font-size:55px;text-align:center;'>Welcome to Recollect, ".$firstname." ".$lastname."!</h1>";
 		
 		?>
 		

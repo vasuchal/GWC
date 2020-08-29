@@ -13,8 +13,10 @@
     </div>
 <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;
-      background-color:white}
+body {font-family: "Times New Roman", Times, serif;
+      background-color:white
+      
+      }
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
