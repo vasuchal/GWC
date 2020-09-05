@@ -1,13 +1,12 @@
 #indexHomepage{
-background-color:#800020;
-color:white;
-text-align:center;
-width:80%;
-height:450px;
-margin:auto;
-font-size:20px;
-border-radius: 40px;
-
+	background-color:#800020;
+	color:white;
+	text-align:center;
+	width:80%;
+	height:450px;
+	margin:auto;
+	font-size:20px;
+	border-radius: 40px;
 }
 
 .topnav {
@@ -42,8 +41,6 @@ border-radius: 40px;
 ;
     color: white;
 }
-
-
 
 #box{
   position:absolute;
@@ -198,23 +195,6 @@ border-radius: 40px;
 #yellow{
   position:absolute;
   top:100px;
-}
-
-#who1 {
-  position:absolute;
-  top:300px;
-  right:700px;
-  width:400px;
-  height:200px;
-
-}
-
-#butt7 {
-  position:absolute;
-  top:300px;
-  right:200px;
-  width:400px;
-  height:200px;
 }
 
 #awesome {

@@ -8,7 +8,6 @@
   	text-align:center;
   	color:#800020;
   	font-family: "Times New Roman", Times, serif;
-  	animation: fade 3s 1;
 
   }
   
@@ -18,6 +17,16 @@
   }
   img {
     box-shadow: 0px 7px 6px grey;
+  }
+  
+  h1,{
+  	  animation: fade 3.5s 1;
+
+  }
+  
+  p,img{
+  	  animation: fade 1.5s 1;
+
   }
   
    @keyframes fade{
@@ -60,14 +69,19 @@
 			$phoneNumber .= $cphone[$i];
 		}
 		else{
-		$phoneNumber .= $cphone[$i]."-";
+		   if(($i+1) % 3 == 0){
+		   		$phoneNumber .= $cphone[$i]."-";
+		   }
+		   else{
+		   		$phoneNumber .= $cphone[$i];
+		   }
 		}
 	}
 
 ?>
 <body>
 
-  <h1 align="center" style="color:#800020;font-size:40px;">Use this Information to Identify Yourself</h1>
+  <h1 align="center" style="color:#800020;font-size:40px;">Your Information</h1>
   <?php  
   
    echo "<p title='Name:".$pfirstname." ".$plastname."id='yes'> <font size='6';> <strong>Name</strong>: ".$pfirstname." ".$plastname."</font></p>";
@@ -77,7 +91,7 @@
  
 
   <center>
-  <img title="This is a picture of you for identification" id="lit" src="grandma.jpg" alt="aligned image" height="220" width="170">
+  <img title="This is a picture of you for identification" id="lit" src="patientSample.jpg" alt="aligned image" height="220" width="170">
 </center>
 </body>
 

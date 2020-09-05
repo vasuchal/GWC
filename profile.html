@@ -11,14 +11,34 @@
     height: 48px;
   } 
   
+  #whoButton {
+  position:absolute;
+  top:200px;
+  right:700px;
+  width:400px;
+  height:200px;
+
+}
+
+
+#familyButton {
+  position:absolute;
+  top:200px;
+  right:200px;
+  width:400px;
+  height:200px;
+}
+
+  
   </style>
   <script src="index.js"></script>
   <div class="topnav">
-    <a title="Home page"class="active" href="indexpatient.php"> <img src="home.png" width="30" height="30" alt="Planets"></a>
+    <a title="Home page"class="active" href="indexpatient.php"> <img src="home.png" width="20" height="20" alt="Planets"></a>
     <a title="Information page" id="box" href="infopatient.html"><img src="question.png" width="20" height="20" alt="Question"></a>
 </div>
 <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
 <style>
+
 button {
 box-shadow: 0px 7px 6px grey;
 }
@@ -28,6 +48,6 @@ box-shadow: 0px 7px 6px grey;
 
 <body>
 
-      <button title="Who Am I" id="who1" style="border-radius:15px;background-color:#800020;color:white;font-size:30px;font-family:'Times';" onclick="location.href='who.php'" >Who Am I?</button>
-    <button title="My Family" id="butt7" style="border-radius:15px;background-color:#800020;color:white;font-size:30px;font-family:'Times';" onclick="location.href='fam.html'">My Family</button>
-
+    <button title="Who Am I" id="whoButton" style="border-radius:15px;background-color:#800020;color:white;font-size:30px;font-family:'Times';" onclick="location.href='who.php'" >Who Am I?</button>
+    <button title="My Family" id="familyButton" style="border-radius:15px;background-color:#800020;color:white;font-size:30px;font-family:'Times';" onclick="location.href='fam.html'">My Family</button>
+</body>
