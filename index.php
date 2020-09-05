@@ -99,8 +99,8 @@
 	</head>
 	<body>
 	<?php
-		$firstname = $_COOKIE["firstname"];
-		$lastname = $_COOKIE["lastname"];
+		$firstname = $_COOKIE["firstNamecaretaker"];
+		$lastname = $_COOKIE["lastNamecaretaker"];
 		echo"<h1 style='color:#800020;font-size:55px;text-align:center;'>Welcome to Recollect, ".$firstname." ".$lastname."!</h1>";
 		
 		?>

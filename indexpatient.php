@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="index1.css">
     <script src="index.js"></script>
     <div class="topnav">
-      <a title="Home page"class="active" href="indexpatient.html"><img src="home.png" width="20" height="20" alt="Planets"></a>
+      <a title="Home page"class="active" href="indexpatient.php"><img src="home.png" width="20" height="20" alt="Planets"></a>
       <a title="Information page" id="box" href="infopatient.html"><img src="question.png" width="16" height="16" alt="Question"></a>
     </div>
 <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
@@ -81,9 +81,9 @@ h1{
 </style>
 </head>
 <?php  
-	$firstname = $_COOKIE["firstname"];
-	$lastname = $_COOKIE["lastname"];
-	echo "<h1>Welcome, ".$firstname." ".$lastname."!</h1>";
+	$pfirstname = $_COOKIE["firstNamepatient"];
+	$plastname = $_COOKIE["lastNamepatient"];
+	echo "<h1>Welcome, ".$pfirstname." ".$plastname."!</h1>";
 
 ?>
 <body>

@@ -225,12 +225,24 @@ if (!empty($_POST['Submit'])){
 			 $sql = "SELECT firstname,lastname FROM patient";
 			 $result = mysqli_query($conn,$sql);
 			 $nameData = mysqli_fetch_array($result, MYSQLI_NUM);
-			 $firstname = $nameData[0];
-			 $lastname = $nameData[1];
-			 $cookiename = "firstname";
-			 $cookiename2 = "lastname";
-			 setcookie($cookiename, $firstname, time() + (43200));
-			 setcookie($cookiename2, $lastname, time() + (43200));
+			 $pfirstname = $nameData[0];
+			 $plastname = $nameData[1];
+			 $cookiename = "firstNamepatient";
+			 $cookiename2 = "lastNamepatient";
+			 $cookiename3 = "firstNamecaretaker";
+			 $cookiename4 = "lastNamecaretaker";
+			 $cookiename5 = "phoneNumbercaretaker";
+			 $sql = "SELECT firstname, lastname, phone FROM caretaker";
+			 $result = mysqli_query($conn, $sql);
+			 $data = mysqli_fetch_array($result, MYSQLI_NUM);
+			 $cfirstname = $data[0];
+			 $clastname = $data[1];
+			 $cphone = $data[2];
+			 setcookie($cookiename, $pfirstname, time() + (43200));
+			 setcookie($cookiename2, $plastname, time() + (43200));
+			 setcookie($cookiename3, $cfirstname, time() + (43200));
+			 setcookie($cookiename4, $clastname, time() + (43200));
+			 setcookie($cookiename5, $cphone, time() + (43200));
 			 header("refresh:1;url=indexpatient.php");
 	 
 		}

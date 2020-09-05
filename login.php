@@ -231,8 +231,8 @@ if (!empty($_POST['Submit'])){
 			 $lastname = $nameData[1];
 			 $cookiename = "firstname";
 			 $cookiename2 = "lastname";
-			 setcookie($cookiename, $firstname, time() + (43200));
-			 setcookie($cookiename2, $lastname, time() + (43200));
+			 setcookie($cookiename, $firstNamecaretaker, time() + (43200));
+			 setcookie($cookiename2, $lastNamecaretaker, time() + (43200));
 			 header("refresh:0;url=index.php");
 		}
 		

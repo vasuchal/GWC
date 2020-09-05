@@ -252,6 +252,7 @@ if (!empty($_POST['Submit'])){
     <label>First Name:</label> <input name="first" type="text" value="" autofocus required><br><br>
    <label> Last Name: </label><input name="last" type="text" value="" autofocus required><br><br>
    <label> Phone Number:</label><input name= "phone" type="text" value="" autofocus required><br><br>
+   <span style="font-size:12px;">(Example: 1800203405)</span>
     <br>
     <br>
     </fieldset>
