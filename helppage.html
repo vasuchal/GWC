@@ -3,147 +3,50 @@
   <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
   <script src="index.js"></script>
   <style>
+  
+body {
+	  font-family: "Times New Roman", Times, serif;
+      background-color:white}
+
+
   div.topnav {
     box-shadow: 0px 6px 6px grey;
     height: 48px;
   }
+  
+  button{
+  	background-color:#800020;
+  	color:white;
+  }
+  
+  #locpatButton {
+  width:350px;
+  height:200px;
+
+}
+
+#locationButton {
+  width:350px;
+  height:200px;
+}
+
+#callButton {
+  width:350px;
+  height:200px;
+}
+p{
+	text-align:center;
+
+}
+
   </style>
   <div class="topnav">
     <a title="Home Page" class ="active" href="indexpatient.php"> <img src="home.png" width="20" height="20" alt="Planets"></a>
-    <a title="Information Page" id="box" href="infopatient.html"><img src="question.png" width="20" height="20" alt="Question"</a>
-
-</div>
+    <a title="Information Page" id="box" href="infopatient.html"><img src="question.png" width="16" height="16" alt="Question"></a>
+  </div>
 </head>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;
-      background-color:white}
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #800020;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
-
-</style>
-<form method="get" action="locationpatient.html">
-  <button title="Click here to access your location if you are lost" id="locpat" style="border-radius:15px;font-size:30px;" type="submit">Where Am I?</button>
-</form>
-<form method="get" action="time.html">
-    <button title="Click here for the What Time Is it Page. It will tell you the time and if it is day or night if you are confused" id="where" style="border-radius:15px;font-size:30px;" type="submit">What Time Is it?</button>
-</form>
-<form method="get" action="call.html">
-    <button title="Call Help" id="call" style="border-radius:15px;font-size:30px;" type="submit">Call</button>
-</form>
+<body>
+<br><br><br><br><br><br><br>
+  <p><button title="Click here for the What Time Is it Page. It will tell you the time and if it is day or night if you are confused" id="locationButton" style="border-radius:15px;font-size:30px;font-family:'Times';" onclick="location.href='time.html'">What Time Is it?</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Click here to access your location if you are lost" id="locpatButton" style="border-radius:15px;font-size:30px;font-family:'Times';" onclick="location.href='locationpatient.html'">Where Am I?</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Call Help" id="callButton" style="border-radius:15px;font-size:30px;font-family:'Times'" onclick="location.href='call.html'">Call</button><p>
+</body>

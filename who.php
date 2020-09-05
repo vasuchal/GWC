@@ -19,15 +19,11 @@
     box-shadow: 0px 7px 6px grey;
   }
   
-  h1,{
-  	  animation: fade 3.5s 1;
+  h1{
+  	  animation: fade 2.5s 1;
 
   }
   
-  p,img{
-  	  animation: fade 1.5s 1;
-
-  }
   
    @keyframes fade{
 
@@ -84,14 +80,14 @@
   <h1 align="center" style="color:#800020;font-size:40px;">Your Information</h1>
   <?php  
   
-   echo "<p title='Name:".$pfirstname." ".$plastname."id='yes'> <font size='6';> <strong>Name</strong>: ".$pfirstname." ".$plastname."</font></p>";
-   echo "<p title='Address: 555 Notarealplace Rd 34443 Houston, Texas' id='yes'> <font size='6';><strong>Address</strong>: 555 Notarealplace Rd 34443 Houston, Texas</font> </p>";
+   echo "<p title='Name:".$pfirstname." ".$plastname."'> <font size='6';> <strong>Name</strong>: ".$pfirstname." ".$plastname."</font></p>";
+   echo "<p title='Address: 555 Notarealplace Rd 34443 Houston, Texas'> <font size='6';><strong>Address</strong>: 555 Notarealplace Rd 34443 Houston, Texas</font> </p>";
    echo " <p title='Caretaker Info: ".$cfirstname." ".$clastname."phone number is ".$phoneNumber."' id='yes' align='center'> <font size='6';><strong>Caretaker Info</strong>: ".$cfirstname." ".$clastname.", ".$phoneNumber."</font> </p>";
 ?>
  
 
   <center>
-  <img title="This is a picture of you for identification" id="lit" src="patientSample.jpg" alt="aligned image" height="220" width="170">
+  <img title="This is a picture of you for identification" id="patient" src="patientSample.jpg" alt="aligned image" height="220" width="170">
 </center>
 </body>
 

@@ -133,30 +133,6 @@
 }
 
 
-#where {
-  position:absolute;
-  right:780px;
-  top:150px;
-  width:350px;
-  height:200px;
-}
-
-#call {
-  position:absolute;
-  right:30px;
-  top:150px;
-  width:350px;
-  height:200px;
-}
-
-#locpat {
-  position:absolute;
-  top:150px;
-  width:350px;
-  height:200px;
-  right:405px;
-
-}
 
 #game {
   position:absolute;

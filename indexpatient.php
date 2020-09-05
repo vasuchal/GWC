@@ -59,14 +59,14 @@ h1{
   	color:#800020;
   	font-size:60px;
   	font-family: "Times New Roman", Times, serif;
-  	animation: fade 3s 1;
+  	animation: fade 2.5s 1;
 
 
   
   }
   
  	button{
- 	  	animation: fade 2s 1;
+ 	  	animation: fade 1.5s 1;
 
  } 
   @keyframes fade{
